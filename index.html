@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Agenda PRO - Sistema de Agendamentos</title>
+    <meta name="description" content="Agenda PRO - Sistema de Agendamentos" />
+    <meta name="author" content="Agenda PRO" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="theme-color" content="#4f46e5" />
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Agenda PRO" />
+
+    <!-- Preload key assets -->
+    <link rel="preconnect" href="PLACEHOLDER_SUPABASE_URL" />
+    <link rel="dns-prefetch" href="PLACEHOLDER_SUPABASE_URL" />
+
+    <!-- Production cache headers -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
+    <script type="module" crossorigin src="/assets/index-CQsdsFNd.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-LjyDQXYX.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-CWyxw5ux.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-IJwkqsk2.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <!-- Service worker registration for offline support -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered:", registration);
+            })
+            .catch((error) => {
+              console.log("SW registration failed:", error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
